@@ -16,7 +16,7 @@ total_rooms = st.number_input(
             value=2,
             min_value=0,
             max_value=10)
-        total_bedrooms = st.number_input(
+total_bedrooms = st.number_input(
             "Total Bedrooms within a block",
             value=2, 
             min_value=0)
