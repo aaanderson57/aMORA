@@ -11,7 +11,12 @@ import numpy as np
 
 st.title("California Housing Prices Prediction")
 
-# layout and input data
-col1, col2 = st.columns([1, 2], gap='large')
-with col1:
-    st.header("Enter the attributes of the housing.")
+total_rooms = st.number_input(
+            "Total Rooms within a block",
+            value=2,
+            min_value=0,
+            max_value=10)
+        total_bedrooms = st.number_input(
+            "Total Bedrooms within a block",
+            value=2, 
+            min_value=0)
