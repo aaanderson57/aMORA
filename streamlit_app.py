@@ -9,7 +9,7 @@ import numpy as np
 #from streamlit_folium import st_folium
 #from utils.combiner import CombinedAttributesAdder
 
-st.title("Sao Paulo Housing Prices Prediction")
+st.title("São Paulo Housing Prices Prediction")
 
 total_rooms = st.number_input(
             "Total Rooms within a block",
