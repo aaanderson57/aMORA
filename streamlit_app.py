@@ -2,7 +2,7 @@ import streamlit as st
 st.set_page_config(page_title="Housing Prices Prediction", page_icon=":house:")
 import pandas as pd
 import numpy as np
-#import pickle
+import pickle
 #import folium
 #from geopy.geocoders import Nominatim
 #import geopy.distance
@@ -37,6 +37,8 @@ input_data = {
             }
             
 input_df = pd.DataFrame([input_data])
+
+loaded_model = load_model('model/linear_reg_model.pkl')
 
 prediction = loaded_model.predict(input_df).squeeze()
 st.session_state['prediction'] = prediction
