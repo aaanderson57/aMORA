@@ -28,8 +28,11 @@ area_util = st.number_input('Área Útil (m²)', min_value=0, value=50)
 st.success(type(bairro))
 st.success(type(tipo_imovel))
 
-#df_bairro = pd.DataFrame([bairro])
-#df_bairro[bairro] = df.bairro.astype('category')
+#df['zipcode'] = df.zipcode.astype('category')
+
+df_bairro = pd.DataFrame([bairro])
+df_bairro['bairro'] = df.bairro.astype('category')
+st.success(df_bairro.dtypes)
 
 #df_tipo_imovel = pd.DataFrame([tipo_imovel])
 
