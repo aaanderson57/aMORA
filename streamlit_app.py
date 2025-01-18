@@ -44,7 +44,7 @@ if st.button('Prever Preço'):
     input_data['bairro'] = input_data.bairro.astype('category')
     input_data['tipo_imovel'] = input_data.tipo_imovel.astype('category')
     
-    st.success(df.dtypes)
+    st.success(input_data.dtypes)
     
     # Faz a predição usando o modelo carregado
     try:
