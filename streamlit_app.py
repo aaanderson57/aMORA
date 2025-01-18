@@ -29,7 +29,7 @@ area_util = st.number_input('Área Útil (m²)', min_value=0, value=50)
 
 #df['zipcode'] = df.zipcode.astype('category')
 
-df = pd.DataFrame([bairro])
+df['bairro'] = pd.DataFrame([bairro])
 st.success(df)
 #df['bairro'] = df.bairro.astype('category')
 #st.success(df.dtypes)
