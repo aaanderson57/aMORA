@@ -27,7 +27,7 @@ if st.button('Prever Preço'):
     input_data = pd.DataFrame({
         'quartos': [quartos],
         'banheiros': [banheiros],
-        'vagas': [vagas_garagem],
+        'vagas': [vagas],
         'area_util': [area_util]
     })
 
