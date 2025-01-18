@@ -30,9 +30,9 @@ st.success(type(tipo_imovel))
 
 #df['zipcode'] = df.zipcode.astype('category')
 
-df_bairro = pd.DataFrame([bairro])
-df_bairro['bairro'] = df.bairro.astype('category')
-st.success(df_bairro.dtypes)
+df = pd.DataFrame([bairro])
+df['bairro'] = df.bairro.astype('category')
+st.success(df.dtypes)
 
 #df_tipo_imovel = pd.DataFrame([tipo_imovel])
 
