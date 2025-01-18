@@ -25,8 +25,13 @@ banheiros = st.number_input('Número de Banheiros', min_value=0, value=2)
 vagas = st.number_input('Número de Vagas na Garagem', min_value=0, value=1)
 area_util = st.number_input('Área Útil (m²)', min_value=0, value=50)
 
-bairro = pd.DataFrame([bairro]).astype('category')
-tipo_imovel = pd.DataFrame([tipo_imovel]).astype('category')
+st.success(type(bairro))
+st.success(type(tipo_imovel))
+
+#df_bairro = pd.DataFrame([bairro])
+#df_bairro[bairro] = df.bairro.astype('category')
+
+#df_tipo_imovel = pd.DataFrame([tipo_imovel])
 
 st.success(type(bairro))
 st.success(type(tipo_imovel))
