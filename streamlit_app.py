@@ -7,7 +7,7 @@ import sklearn
 
 # Carrega o modelo treinado
 try:
-    model = pickle.load(open('housing_price_model1.pkl', 'rb'))
+    model = pickle.load(open('housing_price_model_xgb.pkl', 'rb'))
 except FileNotFoundError:
     st.error("Erro: Arquivo 'housing_price_model.pkl' não encontrado. Certifique-se de que o modelo foi treinado e salvo corretamente.")
     st.stop()
