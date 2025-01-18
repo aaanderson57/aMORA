@@ -40,6 +40,7 @@ if st.button('Prever Preço'):
         'area_util': [area_util]
     })
 
+    print(input_data.dtypes)
     # Faz a predição usando o modelo carregado
     try:
         prediction = model.predict(input_data)[0]
