@@ -44,12 +44,10 @@ if st.button('Prever Preço'):
     input_data['bairro'] = input_data.bairro.astype('category')
     input_data['tipo_imovel'] = input_data.tipo_imovel.astype('category')
     
-    st.success(input_data.dtypes)
     
     # Faz a predição usando o modelo carregado
     try:
-        st.success(input_data.dtypes)
-        #prediction = model.predict(input_data)[0]
-        #st.success(f'Preço de venda estimado: R$ {prediction:.2f}')
+        prediction = model.predict(input_data)[0]
+        st.success(f'Preço de venda estimado: R$ {prediction:.2f}')
     except ValueError as e:
         st.error(f"Erro ao realizar a predição: {e}. Verifique os valores inseridos.")
