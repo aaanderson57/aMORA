@@ -28,7 +28,8 @@ area_util = st.number_input('Área Útil (m²)', min_value=0, value=50)
 bairro = pd.DataFrame([bairro]).astype('category')
 tipo_imovel = pd.DataFrame([tipo_imovel]).astype('category')
 
-st.success(input_data.dtypes)
+st.success(type(bairro))
+st.success(type(tipo_imovel))
 
 # Cria um botão para realizar a predição
 if st.button('Prever Preço'):
