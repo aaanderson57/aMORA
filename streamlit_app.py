@@ -1,45 +1,38 @@
+# prompt: gere um código que lê as entradas do usuário e retorna o preço de venda em um streamlit
+
 import streamlit as st
-st.set_page_config(page_title="Housing Prices Prediction", page_icon=":house:")
-import pandas as pd
-import numpy as np
 import pickle
-#import folium
-#from geopy.geocoders import Nominatim
-#import geopy.distance
-#from streamlit_folium import st_folium
-#from utils.combiner import CombinedAttributesAdder
+import pandas as pd
 
-st.title("São Paulo Housing Prices Prediction")
+# Carrega o modelo treinado
+try:
+    model = pickle.load(open('housing_price_model.pkl', 'rb'))
+except FileNotFoundError:
+    st.error("Erro: Arquivo 'housing_price_model.pkl' não encontrado. Certifique-se de que o modelo foi treinado e salvo corretamente.")
+    st.stop()
 
-total_rooms = st.number_input(
-            "Total Rooms within a block",
-            value=2,
-            min_value=0,
-            max_value=10)
+st.title('Predição de Preço de Venda de Imóveis')
 
-total_bedrooms = st.number_input(
-            "Total Bedrooms within a block",
-            value=2, 
-            min_value=0, 
-            max_value=10)
+# Cria os campos de entrada para as features
+quartos = st.number_input('Número de Quartos', min_value=0, value=2)
+banheiros = st.number_input('Número de Banheiros', min_value=0, value=2)
+vagas = st.number_input('Número de Vagas na Garagem', min_value=0, value=1)
+area_util = st.number_input('Área Útil (m²)', min_value=0, value=50)
 
-location = st.session_state['location']
-input_data = {
-            "lon": location.longitude,
-            "lat": location.latitude,
-            "housing_median_age": housing_median_age,
-            "total_rooms": total_rooms,
-            "total_bedrooms": total_bedrooms,
-            "population": population,
-            "households": households,
-            "median_income": median_income,
-            "ocean_proximity": ocean_proximity
-            }
-            
-input_df = pd.DataFrame([input_data])
 
-loaded_model = load_model('model/linear_reg_model.pkl')
+# Cria um botão para realizar a predição
+if st.button('Prever Preço'):
+    # Cria um DataFrame com os valores de entrada
+    input_data = pd.DataFrame({
+        'quartos': [quartos],
+        'banheiros': [banheiros],
+        'vagas': [vagas_garagem],
+        'area_util': [area_util]
+    })
 
-prediction = loaded_model.predict(input_df).squeeze()
-st.session_state['prediction'] = prediction
-st.success("Done!")
+    # Faz a predição usando o modelo carregado
+    try:
+        prediction = model.predict(input_data)[0]
+        st.success(f'Preço de venda estimado: R$ {prediction:.2f}')
+    except ValueError as e:
+        st.error(f"Erro ao realizar a predição: {e}. Verifique os valores inseridos.")
