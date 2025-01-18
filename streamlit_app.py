@@ -40,10 +40,10 @@ if st.button('Prever Preço'):
         'area_util': [area_util]
     })
 
-    print(input_data.dtypes)
+    
     # Faz a predição usando o modelo carregado
     try:
-        print(input_data.dtypes)
+        st.success(input_data.dtypes)
         #prediction = model.predict(input_data)[0]
         #st.success(f'Preço de venda estimado: R$ {prediction:.2f}')
     except ValueError as e:
