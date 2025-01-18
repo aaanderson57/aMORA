@@ -25,14 +25,14 @@ banheiros = st.number_input('Número de Banheiros', min_value=0, value=2)
 vagas = st.number_input('Número de Vagas na Garagem', min_value=0, value=1)
 area_util = st.number_input('Área Útil (m²)', min_value=0, value=50)
 
-st.success(type(bairro))
-st.success(type(tipo_imovel))
+#até aqui bairro e tipo_imovel serão strings
 
 #df['zipcode'] = df.zipcode.astype('category')
 
 df = pd.DataFrame([bairro])
+st.success(df)
 df['bairro'] = df.bairro.astype('category')
-st.success(df.dtypes)
+#st.success(df.dtypes)
 
 #df_tipo_imovel = pd.DataFrame([tipo_imovel])
 
