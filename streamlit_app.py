@@ -30,6 +30,8 @@ area_util = st.number_input('Área Útil (m²)', min_value=0, value=50)
 if st.button('Prever Preço'):
     # Cria um DataFrame com os valores de entrada
     input_data = pd.DataFrame({
+        'bairro': [bairro],
+        'tipo_imovel': [tipo_imovel],
         'quartos': [quartos],
         'banheiros': [banheiros],
         'vagas_garagem': [vagas],
