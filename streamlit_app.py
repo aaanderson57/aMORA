@@ -26,7 +26,7 @@ vagas = st.number_input('Número de Vagas na Garagem', min_value=0, value=1)
 area_util = st.number_input('Área Útil (m²)', min_value=0, value=50)
 
 bairro = pd.Dataframe([bairro]).astype('category')
-tipo_imovel = pd.Dataframe([tipo_imovel].astype('category')
+tipo_imovel = pd.Dataframe([tipo_imovel]).astype('category')
 
 # Cria um botão para realizar a predição
 if st.button('Prever Preço'):
