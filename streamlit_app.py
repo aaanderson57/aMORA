@@ -38,7 +38,7 @@ area_util = st.number_input('Área Útil (m²)', min_value=0, value=50)
 
 
 # Cria um botão para realizar a predição
-if st.button('Prever Preço'):
+if st.button('Price Prediction'):
     # Cria um DataFrame com os valores de entrada
     input_data = pd.DataFrame({
         'bairro': [bairro],
