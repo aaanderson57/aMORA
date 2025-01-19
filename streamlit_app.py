@@ -11,7 +11,6 @@ except FileNotFoundError:
     st.error("Erro: Arquivo 'housing_price_model.pkl' não encontrado. Certifique-se de que o modelo foi treinado e salvo corretamente.")
     st.stop()
 
-st.caption('Author: Anderson Almeida')
 #st.logo('aMORA_logo.jpeg', size = "large")
 col1, col2, col3 = st.columns(3)
 with col1:
