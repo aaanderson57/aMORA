@@ -6,7 +6,7 @@ import xgboost
 
 # Carrega o modelo treinado
 try:
-    model = pickle.load(open('housing_price_model_xgb.pkl', 'rb'))
+    model = pickle.load(open('Model/housing_price_model_xgb.pkl', 'rb'))
 except FileNotFoundError:
     st.error("Erro: Arquivo 'housing_price_model.pkl' não encontrado. Certifique-se de que o modelo foi treinado e salvo corretamente.")
     st.stop()
@@ -16,11 +16,11 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.write(' ')
 with col2:
-    st.image('aMORA_logo.jpeg', width=200)
+    st.image('logo/aMORA_logo.jpeg', width=200)
 with col3:
     st.write(' ')
 
-st.title('House Pricing Model - São Paulo')
+st.title('-House Pricing Model - São Paulo')
 st.caption('Model developed as part of a selective process for aMORA company. This app will be deleted after the process.')
 st.caption('Data Source: https://www.kaggle.com/datasets/ex0ticone/house-prices-of-sao-paulo-city/data')
     
