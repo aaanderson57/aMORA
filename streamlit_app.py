@@ -11,6 +11,7 @@ except FileNotFoundError:
     st.error("Erro: Arquivo 'housing_price_model.pkl' não encontrado. Certifique-se de que o modelo foi treinado e salvo corretamente.")
     st.stop()
 
+st.caption('Author: Anderson Almeida')
 #st.logo('aMORA_logo.jpeg', size = "large")
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -21,7 +22,6 @@ with col3:
     st.write(' ')
 
 st.title('House Pricing Model - São Paulo')
-st.caption('Author: Anderson Almeida')
 st.caption('Model developed as part of a selective process for aMORA company. This app will be deleted after the process.')
 st.caption('Data Source: https://www.kaggle.com/datasets/ex0ticone/house-prices-of-sao-paulo-city/data')
     
