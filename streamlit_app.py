@@ -56,6 +56,6 @@ if st.button('Price Prediction'):
     # Faz a predição usando o modelo carregado
     try:
         prediction = model.predict(input_data)[0]
-        st.success(f'Preço de venda estimado: R$ {prediction:.2f}')
+        st.success(f'Estimated Price: R$ {prediction:.2f}')
     except ValueError as e:
-        st.error(f"Erro ao realizar a predição: {e}. Verifique os valores inseridos.")
+        st.error(f"Error: {e}. Verify the values inserted.")
