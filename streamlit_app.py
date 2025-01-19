@@ -20,7 +20,7 @@ with col2:
 with col3:
     st.write(' ')
 
-st.title('-House Pricing Model - São Paulo')
+st.title('House Pricing Model - São Paulo')
 st.caption('Model developed as part of a selective process for aMORA company. This app will be deleted after the process.')
 st.caption('Data Source: https://www.kaggle.com/datasets/ex0ticone/house-prices-of-sao-paulo-city/data')
     
