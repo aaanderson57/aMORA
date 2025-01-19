@@ -12,6 +12,7 @@ except FileNotFoundError:
     st.stop()
 
 st.logo('aMORA_logo.jpeg', size = "large")
+st.image('aMORA_logo.jpeg', width=300, caption='First image')
 st.title('House pricing model - São Paulo')
 st.caption('Model developed as part of a selective process for aMORA company. This app will be deleted after the process.')
 
