@@ -11,8 +11,15 @@ except FileNotFoundError:
     st.error("Erro: Arquivo 'housing_price_model.pkl' não encontrado. Certifique-se de que o modelo foi treinado e salvo corretamente.")
     st.stop()
 
-st.logo('aMORA_logo.jpeg', size = "large")
-st.image('aMORA_logo.jpeg', width=200)
+#st.logo('aMORA_logo.jpeg', size = "large")
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write(' ')
+with col2:
+    st.image('aMORA_logo.jpeg', width=200)
+with col3:
+    st.write(' ')
+
 st.title('House pricing model - São Paulo')
 st.caption('Model developed as part of a selective process for aMORA company. This app will be deleted after the process.')
 
