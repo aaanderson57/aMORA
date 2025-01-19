@@ -1,5 +1,3 @@
-# prompt: gere um código que lê as entradas do usuário e retorna o preço de venda em um streamlit
-
 import streamlit as st
 import pickle
 import pandas as pd
