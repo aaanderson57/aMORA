@@ -4,6 +4,22 @@ import pandas as pd
 import sklearn
 import xgboost
 
+page_bg_css = """
+<style>
+[data-testid="stAppViewContainer"] > .main {
+    background-color: #ADD8E6; /* Light Blue */
+    /* Or for a gradient: */
+    /* background: linear-gradient(to right, #ADD8E6, #90EE90); */
+    /* Or for an image: */
+    /* background-image: url("your_image_url.png"); */
+    /* background-size: cover; */
+}
+ </style>
+"""
+st.markdown(page_bg_css, unsafe_allow_html=True)
+
+
+
 # Carrega o modelo treinado
 try:
     model = pickle.load(open('housing_price_model_xgb.pkl', 'rb'))
